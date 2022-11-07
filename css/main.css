@@ -1,14 +1,34 @@
 body {
   font-size: 16px;
   @import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Lato:wght@300&family=Raleway:wght@200;300;400;600;700;800&display=swap');
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #1a1a1a;
 }
 
 h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
-  font-size: 8em;
+  font-size: clamp(3rem, 25vmin, 12rem);
   line-height: 0.85;
   margin-bottom: 10px;
+}
+
+.header {
+  --bg-size: 400%;
+  --color-one: #25df00;
+  --color-two: #6cfdc3;
+  font-size: clamp(3rem, 25vmin, 8rem);
+  background: linear-gradient(
+    45deg,
+    var(--color-one),
+    var(--color-two),
+    var(--color-one)) 0 0 / 100% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: move-bg 8s infinite linear;
 }
 
 h2 {
@@ -17,9 +37,12 @@ h2 {
 }
 
 h2,
-p {
+p,
+li,
+a {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
+  color: #fff;
 }
 
 #container {
@@ -38,7 +61,6 @@ li {
 }
 
 a {
-  color: #000;
   text-decoration: none;
 }
 
@@ -71,6 +93,24 @@ li:last-child {
 }
 
 a:hover {
-  color: #007a78;
+  color: #6cfdc3;
   text-decoration: underline;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header {
+    animation: move-bg 8s linear infinite;
+  }
+
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
 }
