@@ -15,6 +15,11 @@ h1 {
   margin-bottom: 10px;
 }
 
+.page-header {
+  font-size: 6rem;
+  text-align: left;
+}
+
 h2 {
   font-size: 2.5em;
   font-family: 'Raleway', sans-serif;
@@ -30,7 +35,7 @@ a {
 }
 
 #container {
-  padding: 75px;
+  padding: 5rem;
 }
 
 .nav-list {
@@ -81,10 +86,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.linkedin {
-  font-weight: 800;
-}
-
 .header {
   --bg-size: 400%;
   --color-one: #25df00;
@@ -116,3 +117,5 @@ a:hover {
       background-position: var(--bg-size) 0;
     }
   }
+
+
