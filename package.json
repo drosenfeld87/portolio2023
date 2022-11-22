@@ -1,14 +1,22 @@
 {
-   "name": "Demo",
-   "version": "1.0.0",
-   "description": "demo project.",
-   "scripts": {
-     "lite": "lite-server --port 10001",
-     "start": "npm run lite"
-   },
-   "author": "",
-   "license": "ISC",
-   "devDependencies": {
-     "lite-server": "^1.3.1"
-   }
+  "name": "portolio2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drosenfeld87/portolio2023.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drosenfeld87/portolio2023/issues"
+  },
+  "homepage": "https://github.com/drosenfeld87/portolio2023#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
 }
