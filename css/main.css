@@ -3,7 +3,6 @@ body {
   font-size: 16px;
   display: grid;
   place-items: center;
-  min-height: 100vh;
   background: #1a1a1a; }
   body #container {
     padding: 5rem; }
@@ -20,13 +19,37 @@ body {
     body #container #gallery,
     body #container #about,
     body #container #contact {
-      height: 100vh; }
-    body #container h1 {
+      height: 100vh;
+      padding: 50px;
+      position: relative; }
+    body #container .header {
       font-family: 'Raleway', sans-serif;
       font-weight: 800;
-      font-size: clamp(3rem, 25vmin, 3rem);
+      font-size: 7rem;
       line-height: 0.85;
-      margin-bottom: 10px; }
+      margin-bottom: 0;
+      --bg-size: 400%;
+      --color-one: #25df00;
+      --color-two: #6cfdc3;
+      background: linear-gradient(45deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/100% 100%;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: move-bg 8s infinite linear; }
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0; } }
+      @media (prefers-reduced-motion: no-preference) {
+        body #container .header .header {
+          animation: move-bg 8s linear infinite; }
+        @keyframes move-bg {
+          to {
+            background-position: var(--bg-size) 0; } } }
+    body #container .intro-content {
+      max-width: 50%;
+      position: absolute;
+      bottom: 0; }
     body #container .page-header {
       font-size: 2rem;
       text-align: left; }
@@ -45,8 +68,6 @@ body {
       body #container a:hover {
         color: #6cfdc3;
         text-decoration: underline; }
-  body .intro-content {
-    max-width: 50%; }
   body #gallery .img-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -56,23 +77,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain; }
-  body .header {
-    --bg-size: 400%;
-    --color-one: #25df00;
-    --color-two: #6cfdc3;
-    font-size: clamp(3rem, 25vmin, 8rem);
-    background: linear-gradient(45deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/100% 100%;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: move-bg 8s infinite linear; }
-
-@keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 0; } }
-    @media (prefers-reduced-motion: no-preference) {
-      body .header .header {
-        animation: move-bg 8s linear infinite; }
-      @keyframes move-bg {
-        to {
-          background-position: var(--bg-size) 0; } } }
+  body #footer {
+    display: flex;
+    color: #fff;
+    font-family: "Lato", sans-serif; }
