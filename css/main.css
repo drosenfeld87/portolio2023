@@ -17,39 +17,39 @@ body {
           padding-right: 0; }
     body #container #intro,
     body #container #gallery,
-    body #container #about,
-    body #container #contact {
+    body #container #about {
       height: 100vh;
-      padding: 50px;
+      padding: 50px; }
+    body #container #intro {
       position: relative; }
-    body #container .header {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 800;
-      font-size: 7rem;
-      line-height: 0.85;
-      margin-bottom: 0;
-      --bg-size: 400%;
-      --color-one: #25df00;
-      --color-two: #6cfdc3;
-      background: linear-gradient(45deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/100% 100%;
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: move-bg 8s infinite linear; }
+      body #container #intro .intro-content {
+        max-width: 50%;
+        position: absolute;
+        bottom: 35%; }
+        body #container #intro .intro-content .header {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 800;
+          font-size: 8.5rem;
+          line-height: 0.85;
+          margin-bottom: 0;
+          --bg-size: 400%;
+          --color-one: #25df00;
+          --color-two: #6cfdc3;
+          background: linear-gradient(45deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/100% 100%;
+          color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          animation: move-bg 8s infinite linear; }
 
 @keyframes move-bg {
   to {
     background-position: var(--bg-size) 0; } }
-      @media (prefers-reduced-motion: no-preference) {
-        body #container .header .header {
-          animation: move-bg 8s linear infinite; }
-        @keyframes move-bg {
-          to {
-            background-position: var(--bg-size) 0; } } }
-    body #container .intro-content {
-      max-width: 50%;
-      position: absolute;
-      bottom: 0; }
+          @media (prefers-reduced-motion: no-preference) {
+            body #container #intro .intro-content .header .header {
+              animation: move-bg 8s linear infinite; }
+            @keyframes move-bg {
+              to {
+                background-position: var(--bg-size) 0; } } }
     body #container .page-header {
       font-size: 2rem;
       text-align: left; }
@@ -77,6 +77,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain; }
+  body #about .bio .my-photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; }
   body #footer {
     display: flex;
     color: #fff;
