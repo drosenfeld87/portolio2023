@@ -6,11 +6,55 @@
         initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
   <script src="https://kit.fontawesome.com/410b2adcfb.js" crossorigin="anonymous"></script>
+  <script src="vendors/easings.min.js"></script>
+  <script type="text/javascript" src="fullpage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+
   <title>Deb's Portfolio</title>
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Lato:wght@300&family=Raleway:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
 <body>
+
   <div id="container">
+
+    <section id="nav">
+      <ul class="nav-list">
+        <li><a href="#index.html">Home</a></li>
+        <li><a href="#gallery">My Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </section>
+
+    <div class="section active">
+      <h1 class="animate-character">Hi, I'm Debbie Rosenfeld</h1>
+      <h2 class="animate-character">and I'm a Product Designer/Front-End Developer</h2>
+    </div>
+
+    <div class="section bg1">
+      <small>Projects</small>
+      <h1 class="revealUp">My Work</h1>
+      <h4>Here's some stuff I made that I thought you might be impressed with.</h4>
+    </div>
+
+    <div class="section bg2">
+      <small>Who is this person?</small>
+      <h1 class="revealUp">About Me</h1>
+      <h4>You've made it this far and must be expecting some sort of explanation.</h4>
+    </div>
+
+    <div class="section bg1">
+      <small>Want to know more?</small>
+      <h1 class="revealUp">Contact Me</h1>
+      <h4>Surprise! There's no form here.</h4>
+      <p>We both know you're not going to fill one out, so I'm not going to spend the time adding one. Here's my <a href="https://www.linkedin.com/in/debbie-rosenfeld/" class="linkedin">LinkedIn.</a></p>
+    </div>
+
+  </div>
+
+  <!-- <div id="container">
 
     <section id="nav">
       <ul class="nav-list">
@@ -32,38 +76,26 @@
       <h2>The work</h2>
         <div class="img-gallery">
           <figure class="gallery__item gallery__item--1">
+            <a href="work/case-studies.html">
+              <img src="img/case-studies.png" class="gallery__img" alt="customer case studies design mockup">
+              <h4>Customer Case Studies</h4>
+              <p>Info-Tech Research Group</p>
+            </a>
+          </figure>
+          <figure class="gallery__item gallery__item--2">
             <img src="img/ma-rc.png" class="gallery__img" alt="m&a research center design mockup">
             <h4>Mergers, Acquisitions & Divestitures Research Center</h4>
             <p>Info-Tech Research Group</p>
           </figure>
-          <figure class="gallery__item gallery__item--2">
+          <figure class="gallery__item gallery__item--3">
             <img src="img/change-mgmt.png" class="gallery__img" alt="change management resource center design mockup">
             <h4>Change Management Resource Center</h4>
             <p>McLean & Company</p>
           </figure>
-          <figure class="gallery__item gallery__item--3">
-            <a href="work/case-studies.html">
-            <img src="img/case-studies.png" class="gallery__img" alt="customer case studies design mockup">
-            <h4>Customer Case Studies</h4>
-            <p>Info-Tech Research Group</p>
-            </a>
-          </figure>
-          <figure class="gallery__item gallery__item--4">
-            <img src="img/webinar-registration.png" class="gallery__img" alt="Image 4">
-            <h4>Site-wide Webinar Registration</h4>
-            <p>Software Reviews</p>
-          </figure>
-          <figure class="gallery__item gallery__item--5">
-            <img src="img/vendor-portal.png" class="gallery__img" alt="Image 5">
-            <h4>Vendor Portal</h4>
-            <p>Software Reviews</p>
-          </figure>
-          <figure class="gallery__item gallery__item--6">
-            <img src="" class="gallery__img" alt="Image 6">
-            <h4>Some fun things I made on Behance</h4>
-          </figure>
+          <div class="behance-link">
+            <a href=""></a>
+          </div>
         </div>
-      </section>
     </section>
 
     <section id="about">
@@ -73,19 +105,10 @@
       </div>
       <div class="bio">
         <div class="my-photo">
-          <img src="img/me.jpeg" class="gallery__img" alt="Image 6">
+          <img src="img/me.jpeg" alt="profile photo">
         </div>
-        <div class="professional-bio">
-          <h3>Work</h3>
-          <ul>
-            <li>Building products that noticeably stand out from the competition, in both ease of use and </li>
-          </ul>
-        </div>
-        <div class="personal-bio">
-          <h3>Life</h3>
-          <ul>
-            <li></li>
-          </ul>
+        <div class="bio">
+          <p>I'm from Toronto, Canada, and I've been desiging for 15 years. I started out in photography & photo editing moving to graphic design, then to web design, then to product design. I'm mostly passionate about being able to pay rent and eat, but I also love crafting design & code solutions that help people do their jobs faster/save time and money/make their lives easier. When I'm not working, I like to draw, read horror novels, and listen to heavy metal.</p>
         </div>
       </div>
     </section>
@@ -94,9 +117,60 @@
       <h2>Contact</h2>
       <p>There's no form here - we both know you're not going to fill one out, so I'm not going to spend the time adding one. Here's my <a href="https://www.linkedin.com/in/debbie-rosenfeld/" class="linkedin">LinkedIn.</a></p>
     </section>
-  </div>
+  </div> -->
 
   <object type="text/html" data="partials/footer.html"></object>
+
+  <script>
+  // new fullpage('#fullpage', {
+  // autoScrolling:true,
+  // scrollHorizontally: true
+  // });
+
+  gsap.registerPlugin(ScrollTrigger);
+    // REVEAL //
+    gsap.utils.toArray(".revealUp").forEach(function (elem) {
+      ScrollTrigger.create({
+        trigger: elem,
+        start: "top 80%",
+        end: "bottom 20%",
+        markers: true,
+        onEnter: function () {
+          gsap.fromTo(
+            elem,
+            { y: 100, autoAlpha: 0 },
+            {
+              duration: 1.25,
+              y: 0,
+              autoAlpha: 1,
+              ease: "back",
+              overwrite: "auto"
+            }
+          );
+        },
+        onLeave: function () {
+          gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+        },
+        onEnterBack: function () {
+          gsap.fromTo(
+            elem,
+            { y: -100, autoAlpha: 0 },
+            {
+              duration: 1.25,
+              y: 0,
+              autoAlpha: 1,
+              ease: "back",
+              overwrite: "auto"
+            }
+          );
+        },
+        onLeaveBack: function () {
+          gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+        }
+      });
+    });
+  </script>
+
 </body>
 
 </html>

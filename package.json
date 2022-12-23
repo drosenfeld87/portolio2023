@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "sass": "node-sass -w scss/ -o css/ --recursive"
+    "sass": "node-sass -w scss/ -o css/ --recursive"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/drosenfeld87/portolio2023#readme",
   "dependencies": {
+    "fullpage.js": "^4.0.15",
     "node-sass": "^8.0.0"
   }
 }
