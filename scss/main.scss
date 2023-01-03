@@ -1,5 +1,5 @@
 body {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   @import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Lato:wght@300&family=Raleway:wght@200;300;400;600;700;800&display=swap');
   display: grid;
@@ -32,7 +32,7 @@ body {
     padding: 50px;
 
     h2 {
-      padding-bottom: 25px;
+      font-size: 4em;
     }
 
     .header {
@@ -142,17 +142,6 @@ body {
 
   .img-gallery {
     display: flex;
-
-    .gallery__item {
-
-      &:first-child {
-        background-color: red;
-      }
-
-      &:nth-child(2) {
-        background-color: blue;
-      }
-    }
 
     .gallery__img {
       width: 100%;
