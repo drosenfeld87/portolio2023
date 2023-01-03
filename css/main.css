@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gravitas+One&family=Lato:wght@300&family=Raleway:wght@200;300;400;600;700;800&display=swap");
 body {
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.5;
   display: grid;
   place-items: center; }
   body *,
@@ -18,9 +19,10 @@ body {
   body .section {
     height: 100vh;
     width: 100%;
-    padding: 0;
     overflow: hidden;
     padding: 50px; }
+    body .section h2 {
+      padding-bottom: 25px; }
     body .section .header h1 {
       justify-content: center;
       align-items: center;
@@ -62,7 +64,8 @@ body {
     font-family: 'Raleway', 'sans-serif';
     display: flex;
     justify-content: flex-end;
-    list-style: none; }
+    list-style: none;
+    padding-right: 50px; }
     body .nav-list li {
       padding-right: 50px;
       font-size: 1.5em; }
@@ -77,8 +80,6 @@ body {
   body a {
     font-family: 'Lato', sans-serif;
     font-weight: 300; }
-  body p {
-    font-size: 18px; }
   body h4 {
     font-size: 2em; }
   body a {
@@ -88,6 +89,10 @@ body {
       text-decoration: underline; }
   body .img-gallery {
     display: flex; }
+    body .img-gallery .gallery__item:first-child {
+      background-color: red; }
+    body .img-gallery .gallery__item:nth-child(2) {
+      background-color: blue; }
     body .img-gallery .gallery__img {
       width: 100%;
       height: 100%;
@@ -98,10 +103,10 @@ body {
   body #about .bio {
     display: flex; }
     body #about .bio img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 50%; }
+      max-height: 750px;
+      object-fit: cover; }
+    body #about .bio p {
+      padding: 50px; }
   body #contact {
     height: 50vh; }
     body #contact .linkedin a {
