@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gravitas+One&family=Lato:wght@300&family=Raleway:wght@200;300;400;600;700;800&display=swap");
 body {
   font-size: 18px;
-  line-height: 1.5;
-  display: grid;
-  place-items: center; }
+  line-height: 1.5; }
   body *,
   body *:before,
   body *:after {
@@ -19,8 +17,8 @@ body {
   body .section {
     height: 100vh;
     width: 100%;
-    overflow: hidden;
-    padding: 50px; }
+    padding: 50px;
+    overflow: hidden; }
     body .section h2 {
       font-size: 4em; }
     body .section .header h1 {
@@ -74,6 +72,7 @@ body {
   body h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 3.5rem; }
+  body h3,
   body h4,
   body p,
   body li,
@@ -87,6 +86,39 @@ body {
     body a:hover {
       color: #333333;
       text-decoration: underline; }
+  body .projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    body .projects .project {
+      width: 33%;
+      height: auto; }
+    body .projects .project-1 {
+      background-color: #00ff91;
+      width: 100%;
+      position: relative; }
+      body .projects .project-1:before {
+        content: "";
+        background-color: #00ff91;
+        position: absolute;
+        height: 100%;
+        width: 400px;
+        left: -200px;
+        z-index: -1; }
+    body .projects .project-2 {
+      background-color: #0098e4;
+      width: 100%; }
+    body .projects .project-3 {
+      background-color: #ff1361;
+      width: 100%; }
+      body .projects .project-3:before {
+        content: "";
+        background-color: #ff1361;
+        position: absolute;
+        height: 100%;
+        width: 400px;
+        right: -200px;
+        z-index: -1; }
   body .img-gallery {
     display: flex; }
     body .img-gallery .gallery__img {
