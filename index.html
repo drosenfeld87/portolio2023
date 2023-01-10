@@ -19,20 +19,43 @@
 
   <div id="container">
 
-    <section id="nav">
-      <ul class="nav-list">
-        <li><a href="#index.html">Home</a></li>
-        <li><a href="#work">My Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <section id="menu">
+      <div id="menu-bar" onclick="menuOnClick()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </section>
 
+    <div class="menu-bg" id="menu-bg"></div>
+
     <div class="section" id="head">
-      <div class="header">
+
+
+        <div class="circle-container">
+          <div class="circle">
+        </div>
+        <div class="circle-container1">
+          <div class="circle">
+          </div>
+        </div>
+          <div class="circle-container2">
+            <div class="circle">
+            </div>
+          </div>
+        </div>
+              <div class="header">
         <h1 class="animate-character">Debbie</br>Rosenfeld</h1>
         <h2>Product Designer/Front-End Developer</h2>
-        <p>I make things easy to use and aesthetically lovely on the internet with design and css. I've been doing multi-disciplinary for 15 years, which means I've seen some shit, but also have shit yet to see. I love working with other goal-oriented people to help create intuitive and charming web experiences.</p>
+        <p>I make things easy to use and aesthetically lovely on the internet with design and code. I've been doing multi-disciplinary for 15 years, which means I've seen some shit, but also have shit yet to see. I love working with other goal-oriented people to help create intuitive and charming web experiences.</p>
       </div>
     </div>
 
@@ -44,19 +67,23 @@
         <div class="project project-1">
           <h4>Customer Case Studies</h4>
           <p>Internal CMS, IT marketing</p>
+          <a href="">View Project</a>
         </div>
         <div class="project project-2">
           <h4>Change Management Resource Center</h4>
           <p>HR research, tools & resources </p>
+          <a href="">View Project</a>
           <!-- <img src="img/change-mgmt.png" class="gallery__img" alt="change management resource center design mockup"> -->
         </div>
         <div class="project project-3">
           <h4>Vendor Portal</h4>
           <p>Internal CMS, software marketing</p>
+          <a href="">View Project</a>
         </div>
-        <div class="behance">
-          <h4></h4>
-        </div>
+      </div>
+      <div class="behance">
+        <h4>More on Behance</h4>
+        <a href="https://www.behance.net/debbierosenfeld2">View Projects</a>
       </div>
     </div>
 
@@ -133,6 +160,14 @@
         }
       });
     });
+
+
+    // nav
+    function menuOnClick() {
+      document.getElementById("menu-bar").classList.toggle("change");
+      document.getElementById("nav").classList.toggle("change");
+      document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
   </script>
 
 </body>
