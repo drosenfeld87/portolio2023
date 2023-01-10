@@ -12,7 +12,10 @@ body {
     margin: 0;
     padding: 0; }
   body #menu {
-    z-index: 2; }
+    z-index: 2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; }
     body #menu #menu-bar {
       width: 45px;
       height: 40px;
@@ -95,7 +98,6 @@ body {
   100% {
     transform: rotate(-360deg); } }
   body #head .circle-container2 {
-    /*   background: #ff00ff; */
     height: 1200px;
     width: 1200px;
     position: absolute;
@@ -111,13 +113,13 @@ body {
   body #head .circle {
     width: 650px;
     height: 650px;
-    border: 15px solid #6EEDD8;
+    border: 15px solid #222222;
     border-radius: 100%; }
-  body #head .circle-container {
+  body #head .circle-container3 {
     height: 900px;
     width: 900px;
     position: absolute;
-    top: 50vh;
+    top: 70vh;
     left: -10vw;
     animation: clockwise-rotation 145s linear infinite; }
   body #head .header {
